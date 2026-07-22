@@ -3,9 +3,5 @@ export const contactsData = {
     phone: '+62852-1930-2808',
     address: 'Indonesia',
     github: 'https://github.com/Edtoplx',
-    facebook: '',
-    linkedIn: 'https://www.linkedin.com/in/edto08/',
-    twitter: '',
-    stackOverflow: '',
-    devUsername: "edto08"
+    linkedIn: 'https://www.linkedin.com/in/edto08/'
 }
