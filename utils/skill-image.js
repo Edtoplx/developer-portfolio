@@ -82,6 +82,18 @@ import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import terraform from '../app/assets/svg/skills/terraform.svg'
+import ansible from '../app/assets/svg/skills/ansible.svg'
+import helm from '../app/assets/svg/skills/helm.svg'
+import jenkins from '../app/assets/svg/skills/jenkins.svg'
+import gitlabci from '../app/assets/svg/skills/gitlab-ci.svg'
+import argocd from '../app/assets/svg/skills/argo-cd.svg'
+import gitops from '../app/assets/svg/skills/gitops.svg'
+import vpn from '../app/assets/svg/skills/vpn.svg'
+import firewall from '../app/assets/svg/skills/firewall.svg'
+import vlan from '../app/assets/svg/skills/vlan.svg'
+import routing from '../app/assets/svg/skills/routing.svg'
+import lanwan from '../app/assets/svg/skills/lan-wan.svg'
 
 
 
@@ -254,6 +266,30 @@ export const skillsImage = (skill) => {
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'terraform':
+      return terraform;
+    case 'ansible':
+      return ansible;
+    case 'helm':
+      return helm;
+    case 'jenkins':
+      return jenkins;
+    case 'gitlab ci':
+      return gitlabci;
+    case 'argocd':
+      return argocd;
+    case 'gitops':
+      return gitops;
+    case 'vpn':
+      return vpn;
+    case 'firewalls':
+      return firewall;
+    case 'vlan':
+      return vlan;
+    case 'routing':
+      return routing;
+    case 'lan/wan':
+      return lanwan;
     default:
       break;
   }
