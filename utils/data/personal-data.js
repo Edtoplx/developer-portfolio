@@ -8,7 +8,7 @@ export const personalData = {
   address: 'Indonesia',
   github: 'https://github.com/Edtoplx',
   facebook: '',
-  linkedIn: 'https://linkedin.com/in/edi-riyanto-5b3b8a1b7',
+  linkedIn: 'https://www.linkedin.com/in/edto08/',
   twitter: '',
   stackOverflow: '',
   leetcode: '',
