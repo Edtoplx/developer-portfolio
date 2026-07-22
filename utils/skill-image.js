@@ -94,6 +94,7 @@ import firewall from '../app/assets/svg/skills/firewall.svg'
 import vlan from '../app/assets/svg/skills/vlan.svg'
 import routing from '../app/assets/svg/skills/routing.svg'
 import lanwan from '../app/assets/svg/skills/lan-wan.svg'
+import bash from '../app/assets/svg/skills/bash.svg'
 
 
 
@@ -290,6 +291,8 @@ export const skillsImage = (skill) => {
       return routing;
     case 'lan/wan':
       return lanwan;
+    case 'bash':
+      return bash;
     default:
       break;
   }
