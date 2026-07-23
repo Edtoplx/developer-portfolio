@@ -5,6 +5,9 @@ import BlogCard from '../components/homepage/blog/blog-card';
 import Link from 'next/link';
 import { FaBookOpen } from 'react-icons/fa';
 
+// Dynamic rendering for Docker compatibility
+export const dynamic = 'force-dynamic';
+
 async function getDevToBlogs() {
   try {
     const res = await fetch(
