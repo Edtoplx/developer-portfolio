@@ -1,25 +1,41 @@
 // @flow strict
-import { getAllSlugs, getPostBySlug } from '@/lib/blog';
+import { getAllPosts, getPostBySlug } from '@/lib/blog';
 import Link from 'next/link';
 import { FaArrowLeft, FaCalendarAlt, FaClock, FaUser } from 'react-icons/fa';
 
-export async function generateStaticParams() {
-  const slugs = getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
+// Dynamic rendering — no static generation at build time
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
-  const post = await getPostBySlug(slug);
-  return {
-    title: `${post.title} | Edi Riyanto Blog`,
-    description: post.description,
-  };
+  try {
+    const { slug } = params;
+    const post = await getPostBySlug(slug);
+    return {
+      title: `${post.title} | Edi Riyanto Blog`,
+      description: post.description,
+    };
+  } catch {
+    return { title: 'Blog Post Not Found' };
+  }
 }
 
 async function BlogPost({ params }) {
-  const { slug } = params;
-  const post = await getPostBySlug(slug);
+  let post;
+  try {
+    const { slug } = params;
+    post = await getPostBySlug(slug);
+  } catch {
+    return (
+      <div className="min-h-screen bg-[#0f0d24] text-white py-12 px-4 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-red-400 mb-4">Post Not Found</h1>
+          <Link href="/blog" className="text-violet-400 hover:text-violet-300">
+            ← Back to Blog
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#0f0d24] text-white py-12 px-4">
